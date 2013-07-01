@@ -1,0 +1,104 @@
+//-
+//- TABLE
+//- =====
+//-
+//- Modifier Classes
+//- ––––––––––––––––
+//- Add a class of `.table--row-highlight` to te opening table tag to
+//- enable a row hover state.
+//-
+//- Contents
+//- ––––––––
+//- 1. Simple Table
+//- 2. Sortable Columns
+//-
+
+
+//-
+//- 1. SIMPLE TABLE
+//-
+
+table
+
+  thead
+    tr
+      th Model number
+      th Manufacturer
+      th Class
+      th Purpose
+
+  tbody
+    tr
+      td 3PO-series
+      td Cybot Galactica
+      td 3rd
+      td Protocol
+    tr
+      td GNK-series
+      td Industrial Automaton
+      td 5th
+      td Power
+    tr
+      td MSE-6-series
+      td Rebaxan Columni
+      td 5th
+      td Maintenance/Message
+    tr
+      td R2-series
+      td Industrial Automaton
+      td 2nd
+      td Navigation/Repair
+    tr
+      td Viper-series
+      td Arakyd Industries
+      td 2nd
+      td Exploration/Espionage
+
+
+//-
+//- 2. SORTABLE COLUMNS
+//- Adding a class of `.table--sortable` to the opening table tag will allow for
+//- table header links to display their sort direction using pseudo icons.
+//- This also relies on the classes `.sort-asc` and `.sort-desc` being added to
+//- the `th` elements when the data is sorted.
+//-
+
+table.table--sortable
+
+  thead
+    tr
+      th.sort-asc
+        a(href='#') Model number
+      th
+        a(href='#') Manufacturer
+      th
+        a(href='#') Class
+      th
+        a(href='#') Purpose
+
+  tbody
+    tr
+      td 3PO-series
+      td Cybot Galactica
+      td 3rd
+      td Protocol
+    tr
+      td GNK-series
+      td Industrial Automaton
+      td 5th
+      td Power
+    tr
+      td MSE-6-series
+      td Rebaxan Columni
+      td 5th
+      td Maintenance/Message
+    tr
+      td R2-series
+      td Industrial Automaton
+      td 2nd
+      td Navigation/Repair
+    tr
+      td Viper-series
+      td Arakyd Industries
+      td 2nd
+      td Exploration/Espionage

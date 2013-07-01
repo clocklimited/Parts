@@ -1,0 +1,25 @@
+//
+// BLOCKQUOTE
+// ==========
+//
+// A simple row of '/' separated breadcrumb links.
+//
+
+blockquote
+
+  p
+    padding-left 1em
+    padding-right 1em
+    font-size 1.4em
+    line-height 1.3
+
+    &:before
+      content open-quote
+    &:after
+      content close-quote
+
+  small
+    display block
+    text-align right
+    font-size 0.8em
+    margin-top 0.2em

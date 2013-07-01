@@ -1,0 +1,87 @@
+//-
+//- MEDIA BLOCK
+//- ===========
+//-
+//- A 'Media Block' is a very common design pattern used in web design.
+//- By reusing HTML to create these patterns, we can also reuse CSS and save
+//- ourselves a lot of styling.
+//-
+//- The Layout
+//- ––––––––––
+//-
+//-   + – .media –––––––––––––––––––––––– +
+//-   | + – .img –– + – .body ––––––––– + |
+//-   | |           |                   | |
+//-   | |   Image   |       Text        | |
+//-   | |           |                   | |
+//-   | + ––––––––– + ––––––––––––––––– + |
+//-   + ––––––––––––––––––––––––––––––––– +
+//-
+//- Every media block element is made up of 3 basic classes.
+//- - class="media" wraps the content block
+//- - class="img" contains an image, icon or avatar, floated to the left
+//- - class="body"  sits on the right hand side and contains related content
+//-
+//- This technique is a variation of Nicole Sullivan's media object technique.
+//- http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
+//-
+
+
+//-
+//- A simple media block example
+//- ============================
+//-
+
+.media
+
+  //- img class applied directly to an image
+  img.img(src='article-thumbnail.jpg', alt='Hill Valley Clock Tower')
+
+  //- body contains basic text
+  .body
+    h2 Clock Tower Struck by Lightning
+    p Clock stopped at 10:04
+
+
+//-
+//- A more complex example
+//- ======================
+//- Note that the structural classes are identical, it's just the containing
+//- elements and content which have changed.
+//-
+
+article.media
+
+  //- img class applied to a link, wrapping an image and caption
+  a.img(href='/article-url/')
+    figure
+      img(src='article-thumbnail.jpg', alt='Griff Tannen, 19 being restrained outside the Courthouse.')
+    figcaption Gang Leader had Bionic Overloads
+
+  //- body contains an article summary
+  .body
+    h2 Gang Jailed
+    time(datetime='2015-10-22T09:41:14+00:00', pubdate) Thu, October 22nd 2015 - 09:41am
+    p.standfirst Hoverboard Rampage Destroys Courthouse
+    p Reckless Hoverboarders careened into Hill Valley's City Courthouse late yesterday afternoon causing serious damage to the structure.
+    a(href='/article-url/') Read More
+
+
+//-
+//- Image on the Right
+//- ==================
+//- To instead add an image to the right of the content, use an additional .media-alt modifier class.
+//- This can be useful when creating a list where the image appears on alternating sides, as the HTML
+//- structure is identical for each, with the change coming from the added class.
+//-
+
+.media.media--alt
+
+  //- When wrapped in a media-alt class, this element will appear to the right of the content
+  .img
+    img(src='article-image.jpg', alt='Otis Peabody Under Observation at County Asylum')
+    i.icon-top-story Top Story
+
+  .body
+    h2 Local Farmer Claims "Space Zombie" Wrecked His Barn
+    a(href='/article-url/') Read More

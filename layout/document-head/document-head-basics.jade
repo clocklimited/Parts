@@ -1,0 +1,182 @@
+//-
+//- DOCUMENT HEAD
+//- =============
+//- For readability purposes, the HTML5 doctype and opening `head` tag have been omitted.
+//-
+//- 1. Standard Meta Tags
+//- 2. Page Titles
+//- 3. CSS
+//- 4. Javascript - Head Specific
+//- 5. Icons / Images
+//- 6. Open Graph Tags
+//- 7. Extras
+//-
+
+//-
+//- 1. STANDARD META TAGS
+//- =====================
+//- Specify the document charset, force the latest IE rendering engine & Chrome
+//- Frame and setup the viewport for all devices.
+//-
+//- Description: An overview of the current page content, viewable is search
+//- engine listings. Recommended length - 150 characters.
+//- Keywords: Included for niche search engines, as most major ones favour
+//- good page content instead. Up to 10 relevant keywords.
+//- Author: Should include a name and web address of the website author
+//-
+
+meta(charset='utf-8')
+meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+meta(name='viewport', content='initial-scale=1, minimum-scale=1')
+
+meta(name='description', content='Clock is a digital agency. We build experiences that people love.')
+meta(name='keywords', content='Clock, Web Design, London, UK')
+meta(name='author', content='Clock - http://clock.co.uk')
+
+
+//-
+//- 2. PAGE TITLES
+//- ==============
+//- The homepage title should contain the site name and a short description.
+//- Internal pages should include a separated reverse breadcrumb style title.
+//- e.g. Page Title / Sub-Section / Section / Site Name
+//-
+
+title Clock – Award-winning UK web design and on-line marketing.
+
+
+//-
+//- 3. CSS
+//- ======
+//- CSS files should be combined and compressed for production.
+//- Additional stylesheets may be loaded on a per page basis if needed.
+//- Only include IE stylesheets when absolutely necessary.
+//- When including external CSS files (from plugins etc), consider minifying
+//- or adding to the main stylesheet.
+//-
+
+link(rel='stylesheet', href='/css/index.css')
+
+//- Page specific stylesheets
+link(rel='stylesheet', href='/css/gallery.css')
+
+//if lte IE 8
+  link(rel='stylesheet', href=versionPath('/css/index-ie8.css'))
+//if lte IE 7
+  link(rel='stylesheet', href=versionPath('/css/index-ie7.css'))
+
+//- Internal CSS files, authored by third-parties
+link(rel='stylesheet', href='/css/fancybox.css')
+
+//- External CSS files, such as webfonts
+link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Lato:300,400')
+
+
+//-
+//- 4. JAVASCRIPT - HEAD SPECIFIC
+//- =============================
+//- Scripts should only live in the head in specific circumstances,
+//- for example if they need to execute before CSS rendering or page load.
+//-
+
+//- When using Modernizr, start with only the essential modules.
+//- If you need to add more, visit the link within the modernizr.js file to
+//- auto-select modules already in use and add your own.
+script(src='resource/js/modernizr.min.js')
+
+//- If Modernizr isn't needed, but HTML5 is, create HTML5 element support for IE
+script
+  var html5Elements = [ 'article', 'aside', 'footer', 'header', 'nav', 'section', 'time' ]
+  for (var i = 0; i < html5Elements.length; i++) {
+    document.createElement(html5Elements[i])
+  }
+
+
+//-
+//- 5. ICONS / IMAGES
+//- =================
+//-
+
+//- A favicon.ico file, containing both 16px and 32px variations
+link(rel='shortcut icon', href='/images/favicon.ico')
+
+
+//-
+//- iOS App Icons / Title
+//- =====================
+//-
+
+//- A 12 character title which will appear on the home screen – iOS6+
+meta(name='apple-mobile-web-app-title', content='Project Name')
+
+//- iPhone
+link(rel='apple-touch-icon-precomposed', href='apple-touch-icon-precomposed-57x57.png', sizes='57x57')
+//- iPhone (Retina)
+link(rel='apple-touch-icon-precomposed', href='apple-touch-icon-precomposed-114x114.png', sizes='114x114')
+//- iPad
+link(rel='apple-touch-icon-precomposed', href='apple-touch-icon-precomposed-72x72.png', sizes='72x72')
+//- iPad (Retina)
+link(rel='apple-touch-icon-precomposed', href='apple-touch-icon-precomposed-144x144.png', sizes='144x144')
+
+
+//-
+//- iOS Web App Splash Screens / Meta Data
+//- ======================================
+//- These only need to be included if the project can function as a stand-alone web app.
+//- Unfortunately, the -webkit- prefix on these media attributes will fail validation.
+//-
+
+//- Enable web-app capabilities
+meta(name='apple-mobile-web-app-capable', content='yes')
+meta(name='apple-mobile-web-app-status-bar-style', content='black')
+
+//- iPhone
+link(rel='apple-touch-startup-image', href='apple-touch-startup-image-320x460.png', media='(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)')
+//- iPhone (Retina)
+link(rel='apple-touch-startup-image', href='apple-touch-startup-image-640x920.png', media='(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)')
+//- iPhone 5
+link(rel='apple-touch-startup-image', href='apple-touch-startup-image-640x1096.png', media='(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)')
+//- iPad
+link(rel='apple-touch-startup-image', href='apple-touch-startup-image-768x1004.png', media='(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)')
+link(rel='apple-touch-startup-image', href='apple-touch-startup-image-748x1024.png', media='(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)')
+//- iPad (Retina)
+link(rel='apple-touch-startup-image', href='apple-touch-startup-image-1536x2008.png', media='(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)')
+link(rel='apple-touch-startup-image', href='apple-touch-startup-image-1496x2048.png', media='(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)')
+
+
+//-
+//- Microsoft Pinned Tile
+//- =====================
+//-
+
+//- Add a 20 character title which will appear on the tile. Longer titles will be …
+meta(name='application-name', content='Project Name')
+
+//- Add an icon and set the tile background colour
+meta(name='msapplication-TileImage', content='microsoft-pinned-tile-image-144x144.png')
+meta(name='msapplication-TileColor', content='#349aa8')
+
+
+//-
+//- 6. OPEN GRAPH TAGS
+//- ==================
+//- A separate file will soon exist somewhere in this repo, which will detail
+//- Open Graph and Twitter Card usage. When it's created, I'll add a link here.
+//-
+
+
+//-
+//- 7. EXTRAS
+//- =========
+//- Any extras live here. These could include:
+//- * RSS Feeds
+//- * robots.txt / humans.txt
+//- * Google Webmaster tools vericication code
+//-
+
+//- RSS
+link(rel='alternate', type='application/rss+xml', title='Clock - Blog RSS Feed' href='/feed/index.xml')
+
+//- Google Webmaster Tools verification code
+meta(name='google-site-verification', content='XXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+

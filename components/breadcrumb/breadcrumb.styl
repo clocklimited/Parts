@@ -1,0 +1,22 @@
+//
+// BREADCRUMBS
+// ===========
+//
+// A simple row of '/' separated breadcrumb links.
+//
+
+.breadcrumb
+  li
+    display inline-block
+    list-style none
+
+    + li:before
+      content "/"
+      margin-left 3px
+      margin-right 3px
+
+    .breadcrumb__home
+      font-weight bold
+
+  a
+    display inline-block

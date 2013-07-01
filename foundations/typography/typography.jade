@@ -1,0 +1,158 @@
+//-
+//- TYPOGRAPHY
+//- ==========
+//-
+//- Contents
+//- ––––––––
+//- 1. Headings
+//- 2. Paragraphs
+//- 3. Emphasis
+//- 4. Lists
+//- 5. Addresses
+//- 6. Time
+//- 7. Abbreviations
+//-
+
+
+//-
+//- 1. HEADINGS
+//- ===========
+//- Headings should be used with a document outline in mind. Ensure they follow
+//- a correct order which is kept consistent throughput the site.
+//- To visually change heading weighting without affecting the document outline,
+//- consider the Double-Stranded Heading Hierarchy:
+//- http://csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css/
+//-
+
+h1 Heading 1
+h2 Heading 2
+h3 Heading 3
+h4 Heading 4
+h5 Heading 5
+h6 Heading 6
+
+// An example of the Double-Stranded Heading Hierarchy
+h4.h2 Heading 4 which looks like a Heading 2
+
+
+//-
+//- 2. PARAGRAPHS
+//- =============
+//-
+
+p Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci.
+p In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi.
+
+
+//-
+//- 3. ADDING EMPHASIS
+//- ==================
+//- Be sure to use <em> and <strong> elements to make text italic or bold.
+//-
+//- The <b> and <i> elements have been deprecated since HTML4 so should not be
+//- used for this reason as they no longer have any semantic value.
+//- We now often use the <i> element for other reasons, such as housing icons.
+//-
+
+p We apply science, technology and our 
+  em unparalleled
+  |  global network of resources to the pursuit of 
+  strong Building Better Worlds
+  | .
+
+//- Use the small element to de-emphasise text.
+//- It is also commonly used for small print / legal notices
+small 2073 Weyland Industries. All rights reserved.
+
+
+//-
+//- 4. LISTS
+//- ========
+//-
+
+//- Unordered lists contain items with no particular order.
+ul
+  li
+  li
+  li
+
+//- Ordered lists contain items which need to be in a set order.
+ol
+  li A robot may not injure a human being or, through inaction, allow a human being to come to harm.
+  li A robot must obey the orders given to it by human beings, except where such orders would conflict with the First Law.
+  li A robot must protect its own existence as long as such protection does not conflict with the First or Second Laws.
+
+//- Definition lists contain items which have a title and a definition.
+//- A definition list should be used for term definitions – glossaries, lexicons and dictionaries only.
+//- http://24ways.org/2007/my-other-christmas-present-is-a-definition-list/
+dl
+
+  dt Velociraptor
+  dd A genus of dromaeosaurid theropod dinosaur that lived approximately 75 to 71 million years ago. Good at opening doors.
+
+  dt Spinosaurus
+  dd Spinosaurus may be the largest of all known carnivorous dinosaurs. It also has the most annoying ringtone.
+
+  dt T-Rex
+  dd Tyrannosaurus was a bipedal carnivore with a massive skull balanced by a long, heavy tail.
+  dd A 1970s glam rock band, originally a folk duo known as Tyrannosaurus Rex.
+
+
+//-
+//- 5. ADDRESSES
+//- ============
+//- The first example shows a simple way to write a postal address.
+//-
+//- An alternate, more semantic method would include using microformats as in the second example.
+//- This makes use of the hCard microformat - http://microformats.org/wiki/hcard
+//- The hCard microformat also allows for other types of information, such as website or phone number.
+//-
+
+//- Simple solution
+address
+  | 221b Baker St,
+  br
+  | Marylebone,
+  br
+  | London,
+  br
+  | NW1 6XE.
+
+//- Using the hCard microformat
+address.vcard
+  //- Full Name
+  p.fn Egon Spengler
+  //- Address
+  p.adr
+    span.organization-name Ghostbusters,
+    span.street-address 14 North Moore St.,
+    span.extended-address Manhattan,
+    span.locality New York City,
+    span.region New York,
+    span.postal-code 10013,
+    span.country-name USA.
+  //- Phone Number
+  p.tel 555-2368
+
+
+//-
+//- 6. TIME
+//- =======
+//- For a good write-up of possible formats, see:
+//- http://www.brucelawson.co.uk/2012/best-of-time/
+//-
+
+time(datetime='1997-08-29T02:14−04:00') August 29th 1997, 2:14am
+time(datetime='1997-08-29 02:14', pubdate) August 29th 1997, 2:14am
+time(datetime='1997-08-29') August 29th 1997
+time(datetime='02:14') It happened at 2:14am
+
+
+//-
+//- 7. ABBREVIATIONS
+//- ================
+//-
+
+p Any attempt to arrest a senior officer of 
+  abbr(title='Omni Consumer Products') OCP
+  |  results in shutdown.

@@ -1,0 +1,44 @@
+//
+// PAGINATION
+// ==========
+//
+
+.pagination
+  text-align center
+
+.pagination__summary
+  // Needs no default styles
+
+.pagination__list
+
+  li
+    list-style none
+    display inline-block
+
+  a,
+  span
+    text-decoration none
+    padding 5px
+    margin-left 3px
+    margin-right 3px
+
+  .current
+    font-weight bold
+
+  .disabled
+    color #aaa
+
+// Using ISO codes to add arrows to first, previous, next and last links.
+// http://www.evotech.net/blog/2007/04/named-html-entities-in-numeric-order/
+.pagination__first a:before,
+.pagination__first span:before
+  content "\00ab\00a0"
+.pagination__previous a:before,
+.pagination__previous span:before
+  content "\2039\00a0"
+.pagination__next a:after,
+.pagination__next span:after
+  content "\00a0\203A"
+.pagination__last a:after,
+.pagination__last span:after
+  content "\00a0\00bb"
