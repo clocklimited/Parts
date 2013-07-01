@@ -1,4 +1,4 @@
-#BLOCKQUOTES
+# BLOCKQUOTES
 
 Semantic citation markup is an ambiguous issue with no agreed implementation.
 The `<cite>` tag itself is only to be used for the title of a work, such as
@@ -7,12 +7,16 @@ a book, paper, song, movie etc. It should not contain a persons name.
 This means we need something to wrap additional details, such as a name or date.
 
 HTML5 Doctor recommend using an invalid footer element within the blockquote:  
-[http://html5doctor.com/blockquote-q-cite/#change-2011-07-11]()
+http://html5doctor.com/blockquote-q-cite/#change-2011-07-11
 
 The official WHATWG recommendation is to put the blockquote in a figure and add attribution in `<figcaption>`:  
-[http://lists.whatwg.org/htdig.cgi/whatwg-whatwg.org/2012-February/034822.html]()
+http://lists.whatwg.org/htdig.cgi/whatwg-whatwg.org/2012-February/034822.html
 
 For now, we are using the Twitter Bootstrap method of using a `<small>` element.
 This can still contain the `<cite>`, as long as it references a piece of work.
 
-<iframe width="100%" height="300" src="http://jsfiddle.net/jackbrewer/3aQ4t/1/embedded/result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+## Live Example:
+
+![Blockquote Example](http://cl.ly/image/0M190u0E2I15)
+
+http://jsfiddle.net/jackbrewer/3aQ4t/
