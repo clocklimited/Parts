@@ -15,8 +15,8 @@ http://lists.whatwg.org/htdig.cgi/whatwg-whatwg.org/2012-February/034822.html
 For now, we are using the Twitter Bootstrap method of using a `<small>` element.
 This can still contain the `<cite>`, as long as it references a piece of work.
 
-## Live Example:
+## Example:
 
-![Blockquote Example](http://cl.ly/image/0M190u0E2I15)
+[![Blockquote Example](http://f.cl.ly/items/2r3h1C0t0d0a341i2a2N/blockquote.png)](http://jsfiddle.net/jackbrewer/3aQ4t/)
 
 http://jsfiddle.net/jackbrewer/3aQ4t/
