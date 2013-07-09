@@ -17,6 +17,6 @@ This can still contain the `<cite>`, as long as it references a piece of work.
 
 ## Example:
 
-[![Blockquote Example](http://f.cl.ly/items/2r3h1C0t0d0a341i2a2N/blockquote.png)](http://jsbin.com/ugexep/1/)
+[![Blockquote Example](http://f.cl.ly/items/2r3h1C0t0d0a341i2a2N/blockquote.png)](http://jsbin.com/ugexep/latest/edit)
 
-http://jsbin.com/ugexep/1/
+http://jsbin.com/ugexep/latest/edit
