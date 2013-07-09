@@ -49,6 +49,13 @@ Use these in your projects where possible to speed up production and to help mai
 * Buttons
 * Icons
 * Grid Examples
+* Debug Stylesheet with examples
+* Common Form Patterns
+  * Form field combos - DOB, Time/Date etc.
+  * Simple Search Form
+  * Preempt Search Form
+  * Login Form / Password Reset
+  * Custom Input elements - Select2, custom radio/checkboxes
 
 ## Components
 
@@ -57,12 +64,18 @@ Use these in your projects where possible to speed up production and to help mai
 * FAQs
 * Tooltips
 * Modal Overlays
-* Simple Search Form
+* Dialogue Overlays
+* Notification Bars
+* jScrollPane Scrollable Area
+
 
 ## Templates
 
 * Basic Atricle Template
 * Basic Style Guide Page
+* Gallery Templates
+* 500/Maintenance Page
+* Search Results
 
 ## Widgets
 
@@ -71,3 +84,4 @@ Use these in your projects where possible to speed up production and to help mai
 * Search Widget
 * Article List Widget (Text)
 * Article List Widget (Images)
+* Poll Widget
