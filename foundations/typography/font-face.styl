@@ -1,0 +1,19 @@
+//
+// FONT FACE SYNTAX
+// ================
+//
+// The 'Bulletproof Syntax'
+// http://www.fontspring.com/blog/further-hardening-of-the-bulletproof-syntax
+//
+// The first `src` property fixes bugs with IE9 compatability mode.
+// The second `src` property contains:
+// * .eot?#iefix – IE6-IE8
+// * .woff – Modern Browsers
+// * .ttf – Safari, Android, iOS
+// * .svg#svgFontName – Legacy iOS (note that the font name appears after the #)
+//
+
+@font-face
+  font-family 'WebFontName'
+  src url('/fonts/webfont.eot')
+  src url('/fonts/webfont.eot?#iefix') format('embedded-opentype'), url('/fonts/webfont.woff') format('woff'), url('/fonts/webfont.ttf') format('truetype'), url('/fonts/webfont.svg#svgWebFontName') format('svg')
