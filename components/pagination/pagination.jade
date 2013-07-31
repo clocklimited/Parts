@@ -2,16 +2,30 @@
 //- PAGINATION
 //- ==========
 //-
-//- 1. Basic Directional Pagination
-//- 2. Full Pagination List
-//- 3. Disabled Elements
-//- 4. Extras
-//-    4.1 Pagination Summary Message
+//- 1. Pagination Summary Message
+//- 2. Basic Directional Pagination
+//- 3. Full Pagination List
+//- 4. Disabled Elements
 //-
 
 
+//-
+//- 1. PAGINATION SUMMARY MESSAGE
+//- =============================
+//-
+
+.pagination
+  p.pagination__summary Showing 
+    strong 1
+    |  to 
+    strong 10
+    |  of 
+    strong 60
+    |  results.
+
+
 //
-// 1. BASIC DIRECTIONAL PAGINATION
+// 2. BASIC DIRECTIONAL PAGINATION
 // ===============================
 // Just next and previous links
 //
@@ -22,7 +36,7 @@
     li.pagination__next: a(href='#', title='Go to the next page') Next
 
 //-
-//- 2. FULL PAGINATION LIST
+//- 3. FULL PAGINATION LIST
 //- =======================
 //- The full pagination list contains numbered links (up to 5 pages at once)
 //- as well as first, previous, next and last links.
@@ -47,31 +61,16 @@
 
 
 //-
-//- 3. DISABLED ELEMENTS
+//- 4. DISABLED ELEMENTS
 //- ====================
 //- When applicable, a disabled link element should be repaced with a span,
 //- with a class of 'disabled' on the wrapping `<li>`.
 //-
 
-//- Examples:
-li.pagination__first.disabled: span First
-li.pagination__previous.disabled: span Previous
-li.disabled: span 1
-li.pagination__next.disabled: span Next
-li.pagination__last.disabled: span Last
-
-
-//-
-//- 4. EXTRAS
-//- =========
-//-
-
-//- Pagination Summary Message
-//- Should be included directly inside the `.pagination` wrapper.
-p.pagination__summary Showing 
-  strong 1
-  |  to 
-  strong 10
-  |  of 
-  strong 60
-  |  results.
+.pagination
+  ul.pagination__list
+    li.pagination__first.disabled: span First
+    li.pagination__previous.disabled: span Previous
+    li.disabled: span 1
+    li.pagination__next.disabled: span Next
+    li.pagination__last.disabled: span Last
