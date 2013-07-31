@@ -1,0 +1,73 @@
+//-
+//- IE MIXINS
+//- =======
+//- Mixins to specify styles for IE
+//-
+
+
+//-
+//- Add description
+//- Add code example here
+//-
+//- http://jsbin.com/iwonol/2/edit
+//-
+ie(version, content)
+  if $isIE == true
+    if $ieVersion == desiredVersion
+      content()
+
+//-
+//- Add description
+//- Add code example here
+//- mixin()
+//-   background-color #fec0ff
+//- ielte(mixin, 6) (show mixin for stylus pages that are IE [$isIE = true] and version 6 or less of IE [$ieVerison = 6])
+//-
+//- example http://jsbin.com/ibofuj/5/edit
+//-
+ielte(version, content)
+  if $isIE == true
+    if $ieVersion <= version
+      content()
+
+
+//-
+//- Add description
+//- Add code example here
+//-
+//-
+//-
+isie(content)
+  if $isIE == true
+    content()
+
+
+//-
+//- Add description
+//- Add code example here
+//-
+//-
+//-
+notie(content)
+  if $isIE != true
+    content()
+
+
+//-
+//- Add description
+//- Add code example here
+//-
+//-
+//-
+ieWidth(factor)
+  width unquote('expression((this.parentNode.clientWidth * '+(factor / 100)+' - parseInt(this.currentStyle["paddingLeft"]) - parseInt(this.currentStyle["paddingRight"]) - (parseInt(this.currentStyle["borderLeftWidth"]) || 0) - (parseInt(this.currentStyle["borderRightWidth"]) || 0) ) + "px")')
+
+
+//-
+//- Add description
+//- Add code example here
+//-
+//-
+//-
+ieHeight(factor)
+  height unquote('expression((this.parentNode.clientHeight * '+(factor / 100)+' - parseInt(this.currentStyle["paddingTop"]) - parseInt(this.currentStyle["paddingBottom"]) - (parseInt(this.currentStyle["borderTopWidth"]) || 0) - (parseInt(this.currentStyle["borderBottomWidth"]) || 0) ) + "px")')
