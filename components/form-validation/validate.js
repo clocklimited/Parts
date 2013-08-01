@@ -23,29 +23,45 @@ require('jquery.validate.min.js')
 //- Begin the actual validation!
 //-
 
-//- Always target a <form> element
-$('.js-form').validate(
+// set validator defaults for all form validation
+$.validator.setDefaults(
   {
-  //- 'ignore' sets up an <input> class variable
-  //- to have it exempt from validation
     ignore: '.ignore'
-  //- 'errorElement' is the element type of your
-  //- post-input error elements
   , errorElement: 'span'
-  //- 'onkeyup' defines whether to validate during typing
   , onkeyup: false
-  //- 'errorPlacement' is a custom callback to create
-  //- your own custom error messages etc. Takes (error, element)
   , errorPlacement: function(error, element) {
-      // Required field
-      if(error[0].innerHTML.indexOf('required') > -1){
-        $(element).parents('.form-row').addClass('form-row-error').find('.error-text--required').css('display','block')
+      if( !$(element).parents('.form-row').find('.error-text--' + error[0].innerHTML).is(':visible') ) {
+        $(element).parents('.form-row').removeClass('form-row-error').find('.form-row-error-text').hide()
+        $(element).parents('.form-row').addClass('form-row-error').find('.error-text--' + error[0].innerHTML).css('display','block')
       }
     }
-  //- 'unhighlight' is a custom callback for when
-  //- validation standards have been met on a particular element
   , unhighlight: function(element) {
-      $(element).parents('.form-row').removeClass('form-row-error').find('.form-row-error-text').fadeOut()
+      $(element).parents('.form-row').removeClass('form-row-error').find('.form-row-error-text').hide()
     }
   }
 )
+
+// Extend messages to reduce to the keyword
+$.extend(
+  $.validator.messages, {
+    required: "required"
+  , remote: "remote"
+  , email: "email"
+  , url: "url"
+  , date: "date"
+  , dateISO: "dateISO"
+  , number: "number"
+  , digits: "digits"
+  , creditcard: "creditcard"
+  , equalTo: "equalTo"
+  , maxlength: "maxlength"
+  , minlength: "minlength"
+  , rangelength: "rangelength"
+  , range: "range"
+  , max: "max"
+  , min: "min"
+  }
+)
+
+// validate all forms
+$('form').validate()
