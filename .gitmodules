@@ -1,0 +1,3 @@
+[submodule "components/touch-carousel"]
+	path = components/touch-carousel
+	url = git@github.com:nicholasjohn/TouchCarousel.git
