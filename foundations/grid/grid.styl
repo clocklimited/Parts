@@ -1,0 +1,528 @@
+//
+// BASE GRID
+// =========
+//
+
+$gutter = 20px
+$fixedSidebarWidth = 320px
+$flexiMaxWidth = 640px
+
+// GRID SETUP
+
+ielte7Grid()
+  clearfix()
+
+ielte7GridItem()
+  float left
+  display block
+
+.grid
+  margin-left - $gutter
+  ielte(7, ielte7Grid)
+
+.grid__item
+  padding-left $gutter
+  vertical-align top
+  display inline-block
+  box-sizing border-box
+  width 100% // Set default width
+  ielte(7, ielte7GridItem)
+
+
+// MODIFIERS
+
+// Gutterless grid
+.grid--full
+  margin-left 0
+  > .grid__item
+    padding-left 0
+
+// Reverses the rendered layout of the 'grid__item's
+.grid--rev
+  direction rtl
+  text-align right
+  > .grid__item
+    direction ltr
+    text-align left
+
+// Create grids with narrower gutters
+.grid--narrow
+  margin-left - ($gutter / 2)
+  > .grid__item
+    padding-left ($gutter / 2)
+
+// Create grids with wider gutters
+.grid--wide
+  margin-left - ($gutter / 2)
+  > .grid__item
+    padding-left ($gutter / 2)
+
+
+
+// Fixed width sidebar
+
+// Not needed if '.grid__item' has a set default width
+.grid__item--flexi
+.grid__item--fixed
+  width 100%
+
+// Set breakpoint in which the sidebar is a fixed width
+@media $sidebarMq
+  .grid__item--flexi
+    padding-right $fixedSidebarWidth
+
+  .grid__item--fixed
+    width $fixedSidebarWidth
+    margin-left - $fixedSidebarWidth
+
+
+
+// Grid widths mixin
+
+ielte7WidthOneHalf()
+  ieWidth(50)
+ielte7WidthOneThird()
+  ieWidth(100 / 3)
+ielte7WidthTwoThirds()
+  ieWidth(2 * (100 / 3))
+
+ielte7WidthOneQuarter()
+  ieWidth(100 / 4)
+ielte7WidthThreeQuarters()
+  ieWidth(3 * (100 / 4))
+
+ielte7WidthOneFifth()
+  ieWidth(100 / 5)
+ielte7WidthTwoFifths()
+  ieWidth(2 * (100 / 5))
+ielte7WidthThreeFifths()
+  ieWidth(3 * (100 / 5))
+ielte7WidthFourFifths()
+  ieWidth(4 * (100 / 5))
+
+ielte7WidthOneFifth()
+  ieWidth(100 / 5)
+ielte7WidthTwoFifths()
+  ieWidth(2 * (100 / 5))
+ielte7WidthThreeFifths()
+  ieWidth(3 * (100 / 5))
+ielte7WidthFourFifths()
+  ieWidth(4 * (100 / 5))
+
+ielte7WidthOneSixth()
+  ieWidth(100 / 6)
+ielte7WidthFiveSixths()
+  ieWidth(5 * (100 / 6))
+
+ielte7WidthOneEighth()
+  ieWidth(100 / 8)
+ielte7WidthThreeEighths()
+  ieWidth(3 * (100 / 8))
+ielte7WidthFiveEighths()
+  ieWidth(5 * (100 / 8))
+ielte7WidthSevenEighths()
+  ieWidth(7 * (100 / 8))
+
+ielte7WidthOneTenth()
+  ieWidth(100 / 10)
+ielte7WidthThreeTenths()
+  ieWidth(3 * (100 / 10))
+ielte7WidthSevenTenths()
+  ieWidth(7 * (100 / 10))
+ielte7WidthNineTenths()
+  ieWidth(9 * (100 / 10))
+
+ielte7WidthOneTwelfth()
+  ieWidth(100 / 12)
+ielte7WidthFiveTwelfths()
+  ieWidth(5 * (100 / 12))
+ielte7WidthSevenTwelfths()
+  ieWidth(7 * (100 / 12))
+ielte7WidthElevenTwelfths()
+  ieWidth(11 * (100 / 12))
+
+gridWidths($namespace='')
+
+  // Whole
+  .{$namespace}one-whole
+    width 100%
+
+  // Halves
+  .{$namespace}one-half
+    width 50%
+    ielte(7, ielte7WidthOneHalf)
+
+  // Thirds
+  .{$namespace}one-third
+    width (100% / 3)
+    ielte(7, ielte7WidthOneThird)
+  .{$namespace}two-thirds
+    width 2 * (100% / 3)
+    ielte(7, ielte7WidthTwoThirds)
+
+  // Quarters
+  .{$namespace}one-quarter
+    width (100% / 4)
+    ielte(7, ielte7WidthOneQuarter)
+  .{$namespace}two-quarters
+    width 50%
+    ielte(7, ielte7WidthOneHalf)
+  .{$namespace}three-quarters
+    width 3 * (100% / 4)
+    ielte(7, ielte7WidthThreeQuarters)
+
+  // Fifths
+  .{$namespace}one-fifth
+    width (100% / 5)
+    ielte(7, ielte7WidthOneFifth)
+  .{$namespace}two-fifths
+    width 2 * (100% / 5)
+    ielte(7, ielte7WidthTwoFifths)
+  .{$namespace}three-fifths
+    width 3 * (100% / 5)
+    ielte(7, ielte7WidthThreeFifths)
+  .{$namespace}four-fifths
+    width 4 * (100% / 5)
+    ielte(7, ielte7WidthFourFifths)
+
+  // Sixths
+  .{$namespace}one-sixth
+    width (100% / 6)
+    ielte(7, ielte7WidthOneSixth)
+  .{$namespace}two-sixths
+    width (100% / 3)
+    ielte(7, ielte7WidthOneThird)
+  .{$namespace}three-sixths
+    width 50%
+    ielte(7, ielte7WidthOneHalf)
+  .{$namespace}four-sixths
+    width 2 * (100% / 3)
+    ielte(7, ielte7WidthTwoThirds)
+  .{$namespace}five-sixths
+    width 5 * (100% / 6)
+    ielte(7, ielte7WidthFiveSixths)
+
+  // Eighths
+  .{$namespace}one-eighth
+    width (100% / 8)
+    ielte(7, ielte7WidthOneEighth)
+  .{$namespace}two-eighths
+    width (100% / 4)
+    ielte(7, ielte7WidthOneQuarter)
+  .{$namespace}three-eighths
+    width 3 * (100% / 8)
+    ielte(7, ielte7WidthThreeEighths)
+  .{$namespace}four-eighths
+    width 50%
+    ielte(7, ielte7WidthOneHalf)
+  .{$namespace}five-eighths
+    width 5 * (100% / 8)
+    ielte(7, ielte7WidthFiveEighths)
+  .{$namespace}six-eighths
+    width 3 * (100% / 4)
+    ielte(7, ielte7WidthThreeQuarters)
+  .{$namespace}seven-eighths
+    width 7 * (100% / 8)
+    ielte(7, ielte7WidthSevenEighths)
+
+  // Tenths
+  .{$namespace}one-tenth
+    width (100% / 10)
+    ielte(7, ielte7WidthOneTenth)
+  .{$namespace}two-tenths
+    width (100% / 5)
+    ielte(7, ielte7WidthOneFifth)
+  .{$namespace}three-tenths
+    width 3 * (100% / 10)
+    ielte(7, ielte7WidthThreeTenths)
+  .{$namespace}four-tenths
+    width 2 * (100% / 5)
+    ielte(7, ielte7WidthTwoFifths)
+  .{$namespace}five-tenths
+    width 50%
+    ielte(7, ielte7WidthOneHalf)
+  .{$namespace}six-tenths
+    width 3 * (100% / 5)
+    ielte(7, ielte7WidthThreeFifths)
+  .{$namespace}seven-tenths
+    width 7 * (100% / 10)
+    ielte(7, ielte7WidthSevenTenths)
+  .{$namespace}eight-tenths
+    width 4 * (100% / 5)
+    ielte(7, ielte7WidthFourFifths)
+  .{$namespace}nine-tenths
+    width 9 * (100% / 10)
+    ielte(7, ielte7WidthNineTenths)
+
+  // Twelfths
+  .{$namespace}one-twelfth
+    width (100% / 12)
+    ielte(7, ielte7WidthOneTwelfth)
+  .{$namespace}two-twelfths
+    width (100% / 6)
+    ielte(7, ielte7WidthOneSixth)
+  .{$namespace}three-twelfths
+    width (100% / 4)
+    ielte(7, ielte7WidthOneQuarter)
+  .{$namespace}four-twelfths
+    width (100% / 3)
+    ielte(7, ielte7WidthOneThird)
+  .{$namespace}five-twelfths
+    width 5 * (100% / 12)
+    ielte(7, ielte7WidthFiveTwelfths)
+  .{$namespace}six-twelfths
+    width 50%
+    ielte(7, ielte7WidthOneHalf)
+  .{$namespace}seven-twelfths
+    width 7 * (100% / 12)
+    ielte(7, ielte7WidthSevenTwelfths)
+  .{$namespace}eight-twelfths
+    width 2 * (100% / 3)
+    ielte(7, ielte7WidthTwoThirds)
+  .{$namespace}nine-twelfths
+    width 3 * (100% / 4)
+    ielte(7, ielte7WidthThreeQuarters)
+  .{$namespace}ten-twelfths
+    width 5 * (100% / 6)
+    ielte(7, ielte7WidthFiveSixths)
+  .{$namespace}eleven-twelfths
+    width 11 * (100% / 12)
+    ielte(7, ielte7WidthElevenTwelfths)
+
+// PUSH MIXIN
+
+push-setup($namespace='')
+
+  // Whole
+  .{$namespace}one-whole
+    left 100%
+
+  // Halves
+  .{$namespace}one-half
+    left 50%
+
+  // Thirds
+  .{$namespace}one-third
+    left (100% / 3)
+  .{$namespace}two-thirds
+    left 2 * (100% / 3)
+
+  // Quarters
+  .{$namespace}one-quarter
+    left (100% / 4)
+  .{$namespace}two-quarters
+    @extend .{$namespace}one-half
+  .{$namespace}three-quarters
+    left 3 * (100% / 4)
+
+  // Fifths
+  .{$namespace}one-fifth
+    left (100% / 5)
+  .{$namespace}two-fifths
+    left 2 * (100% / 5)
+  .{$namespace}three-fifths
+    left 3 * (100% / 5)
+  .{$namespace}four-fifths
+    left 4 * (100% / 5)
+
+  // Sixths
+  .{$namespace}one-sixth
+    left (100% / 6)
+  .{$namespace}two-sixths
+    @extend .{$namespace}one-third
+  .{$namespace}three-sixths
+    @extend .{$namespace}one-half
+  .{$namespace}four-sixths
+    @extend .{$namespace}two-thirds
+  .{$namespace}five-sixths
+    left 5 * (100% / 6)
+
+  // Eighths
+  .{$namespace}one-eighth
+    left (100% / 8)
+  .{$namespace}two-eighths
+    @extend .{$namespace}one-quarter
+  .{$namespace}three-eighths
+    left 3 * (100% / 8)
+  .{$namespace}four-eighths
+    @extend .{$namespace}one-half
+  .{$namespace}five-eighths
+    left 5 * (100% / 8)
+  .{$namespace}six-eighths
+    @extend .{$namespace}three-quarters
+  .{$namespace}seven-eighths
+    left 7 * (100% / 8)
+
+  // Tenths
+  .{$namespace}one-tenth
+    left (100% / 10)
+  .{$namespace}two-tenths
+    @extend .{$namespace}one-fifth
+  .{$namespace}three-tenths
+    left 3 * (100% / 10)
+  .{$namespace}four-tenths
+    @extend .{$namespace}two-fifths
+  .{$namespace}five-tenths
+    @extend .{$namespace}one-half
+  .{$namespace}six-tenths
+    @extend .{$namespace}three-fifths
+  .{$namespace}seven-tenths
+    left 7 * (100% / 10)
+  .{$namespace}eight-tenths
+    @extend .{$namespace}four-fifths
+  .{$namespace}nine-tenths
+    left 9 * (100% / 10)
+
+  // Twelfths
+  .{$namespace}one-twelfth
+    left (100% / 12)
+  .{$namespace}two-twelfths
+    @extend .{$namespace}one-sixth
+  .{$namespace}three-twelfths
+    @extend .{$namespace}one-quarter
+  .{$namespace}four-twelfths
+    @extend .{$namespace}one-third
+  .{$namespace}five-twelfths
+    left 5 * (100% / 12)
+  .{$namespace}six-twelfths
+    @extend .{$namespace}one-half
+  .{$namespace}seven-twelfths
+    left 7 * (100% / 12)
+  .{$namespace}eight-twelfths
+    @extend .{$namespace}two-thirds
+  .{$namespace}nine-twelfths
+    @extend .{$namespace}three-quarters
+  .{$namespace}ten-twelfths
+    @extend .{$namespace}five-sixths
+  .{$namespace}eleven-twelfths
+    left 11 * (100% / 12)
+
+
+
+// PULL SETUP
+
+pull-setup($namespace='')
+
+  // Whole
+  .{$namespace}one-whole
+    right 100%
+
+  // Halves
+  .{$namespace}one-half
+    right 50%
+
+  // Thirds
+  .{$namespace}one-third
+    right (100% / 3)
+  .{$namespace}two-thirds
+    right 2 * (100% / 3)
+
+  // Quarters
+  .{$namespace}one-quarter
+    right (100% / 4)
+  .{$namespace}two-quarters
+    @extend .{$namespace}one-half
+  .{$namespace}three-quarters
+    right 3 * (100% / 4)
+
+  // Fifths
+  .{$namespace}one-fifth
+    right (100% / 5)
+  .{$namespace}two-fifths
+    right 2 * (100% / 5)
+  .{$namespace}three-fifths
+    right 3 * (100% / 5)
+  .{$namespace}four-fifths
+    right 4 * (100% / 5)
+
+  // Sixths
+  .{$namespace}one-sixth
+    right (100% / 6)
+  .{$namespace}two-sixths
+    @extend .{$namespace}one-third
+  .{$namespace}three-sixths
+    @extend .{$namespace}one-half
+  .{$namespace}four-sixths
+    @extend .{$namespace}two-thirds
+  .{$namespace}five-sixths
+    right 5 * (100% / 6)
+
+  // Eighths
+  .{$namespace}one-eighth
+    right (100% / 8)
+  .{$namespace}two-eighths
+    @extend .{$namespace}one-quarter
+  .{$namespace}three-eighths
+    right 3 * (100% / 8)
+  .{$namespace}four-eighths
+    @extend .{$namespace}one-half
+  .{$namespace}five-eighths
+    right 5 * (100% / 8)
+  .{$namespace}six-eighths
+    @extend .{$namespace}three-quarters
+  .{$namespace}seven-eighths
+    right 7 * (100% / 8)
+
+  // Tenths
+  .{$namespace}one-tenth
+    right (100% / 10)
+  .{$namespace}two-tenths
+    @extend .{$namespace}one-fifth
+  .{$namespace}three-tenths
+    right 3 * (100% / 10)
+  .{$namespace}four-tenths
+    @extend .{$namespace}two-fifths
+  .{$namespace}five-tenths
+    @extend .{$namespace}one-half
+  .{$namespace}six-tenths
+    @extend .{$namespace}three-fifths
+  .{$namespace}seven-tenths
+    right 7 * (100% / 10)
+  .{$namespace}eight-tenths
+    @extend .{$namespace}four-fifths
+  .{$namespace}nine-tenths
+    right 9 * (100% / 10)
+
+  // Twelfths
+  .{$namespace}one-twelfth
+    right (100% / 12)
+  .{$namespace}two-twelfths
+    @extend .{$namespace}one-sixth
+  .{$namespace}three-twelfths
+    @extend .{$namespace}one-quarter
+  .{$namespace}four-twelfths
+    @extend .{$namespace}one-third
+  .{$namespace}five-twelfths
+    right 5 * (100% / 12)
+  .{$namespace}six-twelfths
+    @extend .{$namespace}one-half
+  .{$namespace}seven-twelfths
+    right 7 * (100% / 12)
+  .{$namespace}eight-twelfths
+    @extend .{$namespace}two-thirds
+  .{$namespace}nine-twelfths
+    @extend .{$namespace}three-quarters
+  .{$namespace}ten-twelfths
+    @extend .{$namespace}five-sixths
+  .{$namespace}eleven-twelfths
+    right 11 * (100% / 12)
+
+
+// Breakpoint specific widths
+notieGridStyles()
+  gridWidths()
+
+  @media $lapMq
+    gridWidths('lapdesk-')
+
+  @media $deskMq
+    gridWidths('desk-')
+
+isieGridStyles()
+  gridWidths()
+  gridWidths('lapdesk-')
+  gridWidths('desk-')
+
+notie(notieGridStyles)
+
+isie(isieGridStyles)
