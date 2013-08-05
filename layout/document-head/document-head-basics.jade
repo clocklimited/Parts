@@ -57,6 +57,11 @@ title Clock – Award-winning UK web design and on-line marketing.
 
 link(rel='stylesheet', href='/css/index.css')
 
+//- Conditional to target every browser except IE8 and less
+//if gt IE 8
+  //
+  link(rel='stylesheet', href=versionPath('/static/css/index.css'))
+
 //- Page specific stylesheets
 link(rel='stylesheet', href='/css/gallery.css')
 

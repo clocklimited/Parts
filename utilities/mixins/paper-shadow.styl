@@ -1,0 +1,30 @@
+//
+// Create paper shadow like effect
+//
+// Parameters:
+// - bottom (px)
+// - height (px)
+// - colour
+//
+
+paper-shadow(bottom = 20px, height = 15px, color=#333333)
+  display block
+  position relative
+  &:after, &:before
+    z-index -1
+    content ''
+    width 50%
+    position absolute
+    top 80%
+    bottom bottom
+    box-shadow 0 height 8px color
+    background white
+
+  &:after
+    transform rotate(3deg)
+    right 10px
+    left auto
+  &:before
+    transform rotate(-3deg)
+    left 10px
+    right auto
