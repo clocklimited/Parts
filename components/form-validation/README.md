@@ -23,8 +23,8 @@ The below example has a class of required on the input. This means that the inpu
 .form-row.form-row-full-width
   label
     span.form-label-text Customer Number
-      abbr(title="This field is required") *
-    input.form-field.required(type="text", name="custNumber", placeholder="Enter customer number")
+      abbr(title='This field is required') *
+    input.form-field.required(type='text', name='custNumber', placeholder='Enter customer number')
     span.form-row-description.form-row-error-text.error-text--required This field is required
 ```
 
@@ -47,9 +47,9 @@ You will need to give the message returned the same name as the method for it to
 Example: http://jsbin.com/ipitax/1/edit
 
 ```js
-jQuery.validator.addMethod("domain", function(value, element) {
+jQuery.validator.addMethod('domain', function(value, element) {
   return this.optional(element) || /^http:\/\/clock.co.uk/.test(value);
-}, "domain");
+}, 'domain');
 ```
 
 ### Add Class Rules
@@ -62,7 +62,7 @@ The caveat is that you still need to add each specific validitor message rather 
 Example: http://jsbin.com/adutat/1/edit
 
 ```js
-$.validator.addClassRules("name", {
+$.validator.addClassRules('name', {
   required: true,
   minlength: 2
 });
@@ -72,8 +72,8 @@ $.validator.addClassRules("name", {
 .form-row.form-row-full-width
   label
     span.form-label-text Customer Number
-      abbr(title="This field is required") *
-    input.form-field.name(type="text", name="custNumber", placeholder="Enter customer number")
+      abbr(title='This field is required') *
+    input.form-field.name(type='text', name='custNumber', placeholder='Enter customer number')
     span.form-row-description.form-row-error-text.error-text--required This field is required
     span.form-row-description.form-row-error-text.error-text--minlength This field needs to be more than 2 characters
 ```

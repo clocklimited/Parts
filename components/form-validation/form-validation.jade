@@ -5,52 +5,52 @@
 //- The jQuery script can be found at the bottom of this script
 //-
 
-form(action="#", method="post")
+form(action='#', method='post')
   fieldset
     //- Text Input
     .form-row.form-row-full-width
       label
         span.form-label-text Customer Number
-          abbr(title="This field is required") *
-        input.form-field.required(type="text", name="custNumber", placeholder="Enter customer number")
+          abbr(title='This field is required') *
+        input.form-field.required(type='text', name='custNumber', placeholder='Enter customer number')
         span.form-row-description.form-row-error-text.error-text--required This field is required
 
     .form-row.form-row-full-width
       label
         span.form-label-text Shop name
-          abbr(title="This field is required") *
-        input.form-field.required(type="text", name="shop", placeholder="Enter shop name")
+          abbr(title='This field is required') *
+        input.form-field.required(type='text', name='shop', placeholder='Enter shop name')
         span.form-row-description.form-row-error-text.error-text--required This field is required
 
     .form-row.form-row-full-width
       label
         span.form-label-text Contact name
-          abbr(title="This field is required") *
-        input.form-field.required(type="text", name="name", placeholder="Enter name")
+          abbr(title='This field is required') *
+        input.form-field.required(type='text', name='name', placeholder='Enter name')
         span.form-row-description.form-row-error-text.error-text--required This field is required
 
     .form-row.form-row-full-width
       label
         span.form-label-text Telephone number
-          abbr(title="This field is required") *
-        input.form-field.required(type="text", name="tel", placeholder="Enter Number")
+          abbr(title='This field is required') *
+        input.form-field.required(type='text', name='tel', placeholder='Enter Number')
         span.form-row-description.form-row-error-text.error-text--required This field is required
 
     .form-row.form-row-full-width
       label
         span.form-label-text Email address
-          abbr(title="This field is required") *
-        input.form-field.required.email(type="text", name="email", placeholder="Enter email")
+          abbr(title='This field is required') *
+        input.form-field.required.email(type='text', name='email', placeholder='Enter email')
         span.form-row-description.form-row-error-text.error-text--required This field is required
 
     .form-row.form-row-full-width
       label
         span.form-label-text Please provide details of your request
-          abbr(title="This field is required") *
-        textarea.form-field.required(name="details")
+          abbr(title='This field is required') *
+        textarea.form-field.required(name='details')
         span.form-row-description.form-row-error-text.error-text--required This field is required
 
   //- Form Actions
   .form-row.form-row-full-width.form-row-actions
-    input.btn.btn--alternate(type="reset", value="Clear")
-    input.btn.btn--alternate(type="submit", value="Submit")
+    input.btn.btn--alternate(type='reset', value='Clear')
+    input.btn.btn--alternate(type='submit', value='Submit')
