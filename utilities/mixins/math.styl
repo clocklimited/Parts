@@ -1,0 +1,15 @@
+//
+// Math Utils
+//
+
+// Converts degrees to radians
+
+toRad(degrees)
+  degrees * PI / 180
+
+// Finds X,Y points based on radius and angle
+
+circleEquationX(start, radius, angle)
+  start + radius * cos(toRad(angle))
+circleEquationY(start, radius, angle)
+  start + radius * sin(toRad(angle))

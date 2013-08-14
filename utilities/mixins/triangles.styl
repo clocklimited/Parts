@@ -1,0 +1,26 @@
+//
+// Create triangle shape
+//
+// Parameters:
+// - width (px)
+// - height (px)
+// - colour
+// - direction (top/bottom/left/right)
+//
+
+triangle(w, h, c, d='top')
+  width 0px
+  height 0px
+  border-style solid
+  if d == 'top'
+    border-width 0 (w/2) h (w/2)
+    border-color transparent transparent c transparent
+  if d == 'bottom'
+    border-width h (w/2) 0 (w/2)
+    border-color c transparent transparent transparent
+  if d == 'left'
+    border-width (h/2) w (h/2) 0
+    border-color transparent c transparent transparent
+  if d == 'right'
+    border-width (h/2) 0 (h/2) w
+    border-color transparent transparent transparent c

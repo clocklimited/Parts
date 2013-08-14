@@ -16,11 +16,11 @@ By reusing HTML to create these patterns, we can also reuse CSS and save ourselv
 
 Every media block element is made up of 3 basic classes.
 
-* class="media" wraps the content block
-* class="img" contains an image, icon or avatar, floated to the left
-* class="body"  sits on the right hand side and contains related content
+* class='media' wraps the content block
+* class='img' contains an image, icon or avatar, floated to the left
+* class='body'  sits on the right hand side and contains related content
 
-This technique is a variation of Nicole Sullivan's media object technique.  
+This technique is a variation of Nicole Sullivan's media object technique.
 http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
 
 
