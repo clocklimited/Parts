@@ -64,4 +64,6 @@ $.extend(
 )
 
 // validate all forms
-$('form').validate()
+$('form').each(function() {
+  $(this).validate()
+})
