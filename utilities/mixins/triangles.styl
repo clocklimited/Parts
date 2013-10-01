@@ -5,7 +5,7 @@
 // - width (px)
 // - height (px)
 // - colour
-// - direction (top/bottom/left/right)
+// - direction (top/bottom/left/right/top-left/top-right/bottom-left/bottom-right)
 //
 
 triangle(w, h, c, d='top')
@@ -23,4 +23,16 @@ triangle(w, h, c, d='top')
     border-color transparent c transparent transparent
   if d == 'right'
     border-width (h/2) 0 (h/2) w
+    border-color transparent transparent transparent c
+  if d == 'top-left'
+    border-width h w 0 0
+    border-color c transparent transparent transparent
+  if d == 'top-right'
+    border-width 0 w h 0
+    border-color transparent c transparent transparent
+  if d == 'bottom-right'
+    border-width 0 0 h w
+    border-color transparent transparent c transparent
+  if d == 'bottom-left'
+    border-width h 0 0 w
     border-color transparent transparent transparent c
