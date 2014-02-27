@@ -10,6 +10,7 @@ Use these in your projects where possible to speed up production and to help mai
 
 * Document Head
   * Basic Document Head
+  * Open Graph meta tags (including social media sharing)
 * Main Header
   * Basic Header
 * Main Navigation
