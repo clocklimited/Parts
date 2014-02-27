@@ -1,0 +1,103 @@
+//-
+//- OPENGRAPH
+//- =============
+//- This document should be included in block-format as part of the document head.
+//- It is worth noting that many redundant tags have been removed,
+//- as they fallback to the standard OpenGraph #og:attr tags
+//-
+//- 1. Default Site Layout
+//- 2. Article Layout
+//-   2.1 OpenGraph Defaults
+//-   2.2 Google+
+//-   2.3 Twitter
+//-   2.4 Facebook
+//-
+
+
+//-
+//- 1. Default Site Layout
+//- ======================
+//- The below tags should be used in the generic document#head
+//- N.B. Jade blocks should be used so other layouts can overwrite them
+//-
+
+//- og:title is the article's main title
+meta(property='og:title', content='PAGE_TITLE')
+
+//- og:site_name is the name of the website the article sits on
+meta(property='og:site_name', content='SITE_NAME')
+
+
+//-
+//- 2. Article Layout
+//- =================
+//- The below tags should be used to overwrite
+//- document#head blocks (as defined in Default Site Layout)
+//-
+
+//-
+//- 2.1. OpenGraph Defaults
+//- =======================
+//-
+
+//- og:type must be specified for graph data to be parsed
+//- View all types at http://ogp.me/#types
+meta(property='og:type', content='article')
+
+//- og:site_name is the name of the website the article sits on
+meta(property='og:site_name', content='SITE_NAME')
+
+//- og:title is the article's main title
+meta(property='og:title', content='ARTICLE_TITLE')
+
+//- og:description should be a shortened description of the article
+meta(property='og:description', content='ARTICLE_SUMMARY')
+
+//- og:url is the caconical, permanent URL of the article
+//- N.B. This URL should be forwarded using a 301 redirect header if the slug changes
+meta(property='og:url', content='ARTICLE_FULL_URL')
+
+//- og:image is the article's main image (if applicable)
+meta(property='og:image', content='ARTICLE_IMAGE_URL')
+
+//- article:published_time should be defined as a UTC timestamp
+meta(property='article:published_time', content='2013-09-17T05:59:00+01:00')
+
+//- article:section should be the article's main category (if applicable)
+meta(property='article:section', content='ARTICLE_CATEGORY')
+
+
+//-
+//- 2.2 Google+
+//- ===========
+//-
+
+//- This should be the URL to the publisher's Google+ profile
+link(rel='publisher', href='https://plus.google.com/PUBLISHER_USERNAME')
+//- This should be the URL to the author's Google+ profile (if applicable)
+link(rel='author', href='https://plus.google.com/AUTHOR_USERNAME/posts')
+
+
+//-
+//- 2.3 Twitter
+//- ===========
+//-
+
+//- twitter:card is the type of card displayed on Twitter sharing
+//- A full list of these can be found at https://dev.twitter.com/docs/cards
+meta(name='twitter:card', content='summary')
+//- twitter:site is the Twitter handle of the publisher
+meta(name='twitter:site', content='@clock')
+//- twitter:creator:id is the account ID of the author (if applicable)
+//- This can be found at: http://www.idfromuser.com/getID.php?service=twitter&username={TWITTER_HANDLE}
+meta(name='twitter:creator:id', content='TWITTER_ID')
+
+
+//-
+//- 2.4 Facebook
+//- ============
+//-
+
+//- fb:admins is the account ID of the publisher
+//- This can be found at: http://graph.facebook.com/{USERNAME}
+meta(property='fb:admins', content='0123456')
